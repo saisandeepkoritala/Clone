@@ -362,7 +362,7 @@ button:hover{
 .middle .posts .commentpost{
     border:1px solid black;
     padding: 5px;
-    background-color: rgb(182, 178, 178);
+    background-color: rgb(223, 219, 219);
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -374,7 +374,7 @@ button:hover{
     font-size:0.8rem;
 }
 .middle .posts .commentpost h1{
-    font-size: 1.5rem;
+    font-size: 1.75rem;
 }
 .middle .posts .commentpost div{
     display: flex;
@@ -506,4 +506,185 @@ input[type="file"] {
     padding: 10px 20px;
     border-radius: 20px;
     border-color: blue;
+}
+
+.home .jobs{
+    display: flex;
+    align-items: flex-start;
+    padding: 25px;
+    gap:10px;
+}
+
+.home .jobs .left{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    border:1px solid rgb(167, 165, 165);
+    min-height: 100vh;
+    width:25%;
+    background-color: rgb(229, 221, 221);
+    gap:10px;
+}
+
+.home .jobs .left>div{
+    display: flex;
+    align-items: flex-start;
+    justify-content:space-between;
+    padding: 20px;
+    background-color: white;
+    width:100%;
+}
+
+.home .jobs .left .last{
+    border:1px solid rgb(167, 165, 165);
+}
+
+.home .jobs .middle{
+    width:50%;
+    border:1px solid rgb(167, 165, 165);
+    padding: 10px;
+    background-color: rgb(238, 238, 238);
+}
+.home .jobs .middle h2{
+    font-size: 1.5rem;
+}
+
+.home .jobs .right{
+    width:25%;
+}
+.home .jobs .right >div{
+    border:1px solid rgb(167, 165, 165);
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    gap:25px;
+    min-height: 50vh;
+}
+
+.home .jobs .right div h1{
+    font-size: 1.5rem;
+}
+.home .jobs .right div p{
+    font-size: 1.1rem;
+}
+.home .jobs .middle .jobspage .pages{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    border:1px solid black;
+    background-color: rgb(255, 255, 255);
+    padding: 25px;
+    gap:10px;
+}
+
+.home .message{
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.home .message .left,.home .message .middle,.home .message .right{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    border:1px solid black;
+    gap:10px;
+    padding: 10px;
+}
+
+.home .message .middle{
+    flex-direction: column;
+    width:60%;
+    padding: 25px;
+    align-items: flex-start;
+    min-height: 90vh;
+    justify-content: flex-start;
+    gap:25px;
+
+}
+
+.home .message .middle p{
+    font-size: 1.25rem;
+}
+.home .message .middle button{
+    display: block;
+    padding: 10px;
+    background-color: rgb(140, 140, 216);
+    color:white;
+
+}
+
+.home .message .left >div{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+}
+.home .message .left .details{
+    gap:25px;
+}
+.home .message .left .user{
+    flex-direction: column;
+    align-items: flex-start;
+    background-color: antiquewhite;
+    width:100%;
+}
+
+.home .message .right .credits{
+    width:300px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap:25px;
+    min-height: 50vh;
+}
+
+.home .notify{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap:10px;
+    padding: 25px;
+}
+
+.home .notify .left h1{
+    font-size: 1.25rem;
+}
+
+.home .notify .left{
+    border: 1px solid black;
+    display: flex;
+    align-items: center;
+    gap:25px;
+    background-color: rgb(187, 180, 172);
+}
+
+.home .notify .middle{
+    align-items: center;
+    border: 1px solid black;
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    background-color: rgb(203, 199, 194);
+}
+
+.home .notify .credits{
+    width:300px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap:25px;
+    border: 1px solid black;
+    background-color: rgb(195, 192, 189);
+}
+.home .notify >div{
+    min-height: 50vh;
+    width:33%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
 }

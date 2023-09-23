@@ -1,4 +1,7 @@
+import Modal from "./Modal";
 const Me=()=>{
-    return <div>Me</div>
+    return <div>
+        <Modal/>
+    </div>
 };
 export default Me;
