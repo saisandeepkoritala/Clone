@@ -1,7 +1,29 @@
+
 *{
     padding:0;
     margin: 0;
     box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-size: medium;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: lighter;
+}
+
+body{
+    position: relative;
+}
+
+.modal-in{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width:75%;
+    height: 75%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
 }
 
 .form{
@@ -11,7 +33,10 @@
     justify-content:space-around;
     flex-direction: column;
     gap:20px;
-    background-color: rgb(227, 219, 209);
+}
+
+.portal .home{
+    position: relative;
 }
 .portal .home .navbar{
     background-color: rgb(74, 69, 69);
@@ -68,7 +93,7 @@ button:hover{
     height: 50px;
     font-size: 1.5rem;
     border-radius: 10px;
-
+    border:1px solid black;
 }
 
 .signin button,.signup button{
@@ -93,95 +118,149 @@ button:hover{
     background-color: rgb(239, 233, 233);
 }
 .landing >div{
-    flex:0.33;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
 }
 
+.modal .modal-in .modal-details{
+    position: relative;
+    background-color: rgb(211, 197, 197);
+    height: 90%;
+}
 
-.landing .landing-left .full{
-    width:100%;
+.modal .modal-in .modal-details>div{
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap:10px;
-    font-size:medium;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-}
-.landing .landing-left .full >div{
-    border:1px solid rgb(167, 165, 165);
-    border-radius: 10px;
-    background-color:rgb(229, 221, 221);
-}
-
-.landing .landing-left .full .outer{
-    display:flex;
-    flex-direction: column;
-    align-items:flex-start;
-    justify-content: space-evenly;
-    min-height: 75vh;
-}
-.landing .landing-left .full .outer >div,.landing .landing-left .full .less >div{
-    border-bottom:1px solid black;
-    width:100%;
-    display:flex;
-    flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
     justify-content: space-evenly;
     gap:10px;
-    padding: 10px;
 }
-
-.landing .landing-left .full .outer .inner1 img{
-    width:100px;
-    height:100px;
-    object-fit: cover;
-    border:1px solid rgb(167, 165, 165);
-    outline: 1px solid white;
-    border-radius: 50%;
-}
-.landing .landing-left .full .outer .inner1 h2{
+.modal .modal-in .modal-details div input{
+    width:400px;
+    height: 35px;
+    font-size: 2rem;
     font-weight: lighter;
-    font-size: 20px;
 }
-.landing .landing-left .full .outer .inner2{
+.modal .modal-in .modal-details .modal-btn{
+    position: absolute;
+    bottom:0;
+    right:0;
+    top:400px;
+    padding:15px;
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    padding: 10px;
-}
-.landing .landing-left .full .outer .inner2 .inner2-out{
-    color:blue;
-}
-.landing .landing-left .full .less .inner4,.landing .landing-left .full .less .inner5{
-    align-items: flex-start;
-    padding: 10px;
-}
-.landing .landing-left .full .less .inner4 .blue{
-    color:blue;
-}
-.landing .landing-left .full .less .inner5 .blue{
-    color:blue;
+    align-items: center;
 }
 
-.landing .landing-left .full .less .inner6,.landing .landing-left .full .less .inner7{
-    align-items: flex-start;
-    padding: 10px;
-    color:blue;
+/*  */
+    .landing .landing-left .user-profile {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        font-size: medium;
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    }
+    
+    .landing .landing-left .user-profile .profile-container {
+        border: 1px solid rgb(167, 165, 165);
+        border-radius: 10px;
+        background-color: rgb(229, 221, 221);
+    }
+    
+    .landing .landing-left .user-profile .profile-container .profile-info {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        min-height: 75vh;
+    }
+    .landing .landing-left .user-profile .profile-container .profile-stats{
+        flex-direction: row;
+    }
+
+    .landing .landing-left .user-profile .profile-container .profile-stats .profile-stats-outer{
+        color:blue;
+    }
+    .landing .landing-left .user-profile .profile-container .modal {
+        position: absolute;
+    }
+    
+    .landing .landing-left .user-profile .profile-container > div,
+    .landing .landing-left .user-profile .profile-details > div {
+        border-bottom: 1px solid black;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+        gap: 10px;
+        padding: 40px;
+    }
+    
+    .landing .landing-left .user-profile .profile-container .profile-info img {
+        width: 100px;
+        height: 100px;
+        object-fit: cover;
+        border: 1px solid rgb(167, 165, 165);
+        outline: 1px solid white;
+        border-radius: 50%;
+    }
+    
+    .landing .landing-left .user-profile .profile-container .profile-info .profile-name {
+        font-weight: lighter;
+        font-size: 20px;
+    }
+    
+    .landing .landing-left .user-profile .profile-container .profile-details {
+        border-bottom: none;
+    }
+    .landing .landing-left .user-profile .profile-container .profile-actions{
+        border-bottom: none;
+    }
+    .landing .landing-left .user-profile .profile-details {
+        border-bottom: none;
+    }
+    .landing .landing-left .user-profile .profile-details>div{
+        border:1px solid  rgb(167, 165, 165);
+        background-color: rgb(229, 221, 221);
+        border-radius: 10px;
+    }
+
+    .landing .landing-left .user-profile .profile-details .recent-activities {
+        align-items: flex-start;
+        padding: 30px;
+    }
+    
+    .landing .landing-left .user-profile .profile-details .recent-activities .section-title {
+        color: blue;
 }
+    
+    .landing .landing-left .user-profile .profile-details .groups {
+        align-items: flex-start;
+        padding: 30px;
+    }
+    
+    .landing .landing-left .user-profile .profile-details .groups .section-title {
+        color: blue;
+    }
+    
+    .landing .landing-left .user-profile .profile-details .events {
+        align-items: flex-start;
+        padding: 30px;
+        color: blue;
+    }
+    
+    .landing .landing-left .user-profile .profile-details .followed-hashtags {
+        align-items: flex-start;
+        padding: 30px;
+        color: blue;
+    }
+    
+    
 
-.landing .landing-left .full .outer .inner3{
-    border-bottom: none;
-}
-
-.landing .landing-left .full .less .inner7{
-    border-bottom: none;
-}
-
-
+/*  */
 .middle img{
     width:50px;
     height:50px;
@@ -224,6 +303,7 @@ button:hover{
 .middle form button{
     padding: 10px 25px;
 }
+
 .middle .posts{
     border:1px solid rgb(167, 165, 165);
     padding: 25px;
@@ -242,6 +322,10 @@ button:hover{
     justify-content:flex-start;
 }
 
+.middle .posts div div{
+    display: flex;
+    flex-direction: column;
+}
 .middle .posts div p{
     margin-left: 10px;
     font-size:20px;
@@ -257,14 +341,56 @@ button:hover{
     justify-content:space-around;
 }
 
+.middle .posts .btns form{
+    display: flex;
+    border-radius: 0%;
+    padding: 5px;
+}
+
+.middle .posts .btns form input{
+    width:250px;
+    height:100px;
+    font-size: 2rem;
+}
+
 .middle .posts .btns>div{
     display: flex;
     align-items: center;
     justify-content:flex-start;
 }
+
+.middle .posts .commentpost{
+    border:1px solid black;
+    padding: 5px;
+    background-color: rgb(182, 178, 178);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    min-height: 10vh;
+    justify-content: space-between;
+}
+
+.middle .posts .commentpost p{
+    font-size:0.8rem;
+}
+.middle .posts .commentpost h1{
+    font-size: 1.5rem;
+}
+.middle .posts .commentpost div{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+
+}
 .middle .posts .user{
     border:2px solid blue;
     border-radius: 50%;
+}
+
+.middle .posts img{
+    width:200px;
+    height: 200px;
+    border-radius: 0%;
 }
 
 .rightside .bottom img{
@@ -297,6 +423,87 @@ button:hover{
     align-items: center;
 }
 
+.rightside .credits{
+    padding: 10px;
+    width:200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    border: 1px solid rgb(167, 165, 165);
+    background-color:rgb(229, 221, 221);
+    min-width:20vw;
+}
+
+.rightside .credits p{
+    display: block;
+    width: 100px;
+    height:100px;
+}
+
 .rightside .blue{
     color:blue;
+}
+
+input[type="file"] {
+    color: transparent; 
+}
+
+.network{
+    display: flex;
+    align-items:flex-start;
+    padding: 10px;
+}
+
+.network .left {
+    border: 1px solid black;
+    padding: 10px;
+    background-color: antiquewhite;
+    min-height: 100vh;
+}
+
+.network .left h1{
+    font-size: 1.5rem;
+}
+.network .left >div{
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+    padding: 10px;
+    font-size: 1.15rem;
+}
+
+.network .right{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap:30px;
+}
+.network .right .user{
+    border: 1px solid black;
+    border-radius: 50%;
+    padding: 5px;
+}
+.network .right >div{
+    width:200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border:1px solid black;
+    gap:15px;
+    padding: 10px;
+    transition: ease-in 0.2s;
+}
+
+.network .right >div:hover{
+    transform: scale(1.02);
+    background-color: antiquewhite;
+    font-size: 18px;
+}
+.network .right >div button{
+    padding: 10px 20px;
+    border-radius: 20px;
+    border-color: blue;
 }

@@ -6,6 +6,9 @@ import Messaging from "./Messaging";
 import Notifications from "./Notifications";
 import Me from "./Me";
 import ReactDOM from "react-dom";
+import {AiOutlineHome,AiOutlineUsergroupAdd,AiOutlineMessage,AiOutlineBell,AiOutlineUserAdd} from "react-icons/ai";
+import {FaSuitcaseRolling} from "react-icons/fa";
+
 const Home=({user})=>{
     return ReactDOM.createPortal(
     <div className="home">
@@ -13,22 +16,22 @@ const Home=({user})=>{
         <nav className='navbar'>
             <ul className='list'>
             <li>
-                <Link to="/">Landing</Link>
+                <Link to="/"><AiOutlineHome size="30"/></Link>
             </li>
             <li>
-                <Link to="/network">My Network</Link>
+                <Link to="/network"><AiOutlineUsergroupAdd size="30"/></Link>
             </li>
             <li>
-                <Link to="/jobs">Jobs</Link>
+                <Link to="/jobs"><FaSuitcaseRolling size="30"/></Link>
             </li>
             <li>
-                <Link to="/messaging">Messaging</Link>
+                <Link to="/messaging"><AiOutlineMessage size="30"/></Link>
             </li>
             <li>
-                <Link to="/notifications">Notifications</Link>
+                <Link to="/notifications"><AiOutlineBell size="30"/></Link>
             </li>
             <li>
-                <Link to="/me">Me</Link>
+                <Link to="/me"><AiOutlineUserAdd size="30"/></Link>
             </li>
             </ul>
         </nav>
